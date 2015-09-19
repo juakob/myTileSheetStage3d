@@ -264,8 +264,8 @@ class ContextWrapper extends EventDispatcher
 			context3D.configureBackBuffer(stage.stageWidth, stage.stageHeight, TilesheetStage3D.antiAliasing, false);
 			
 			baseTransformMatrix.identity();
-			baseTransformMatrix.appendTranslation( -stage.stageWidth * 0.5, -stage.stageHeight * 0.5, 0 );
-			baseTransformMatrix.appendScale( 2 / stage.stageWidth, -2 / stage.stageHeight, 1 );
+			baseTransformMatrix.appendTranslation( -1280 * 0.5, -720 * 0.5, 0 );
+			baseTransformMatrix.appendScale( 2 / 1280, -2 / 720, 1 );
 			
 			//apply the transform matrix
 			context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 0, baseTransformMatrix, true);
